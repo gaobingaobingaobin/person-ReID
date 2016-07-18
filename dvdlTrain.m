@@ -43,11 +43,11 @@ end
 function D=learnBasis(P,Q,X,Y)%250*150,250*150,300*150,300*150
 % function D=learnBasis(P,Q,X,Y,D)
 % MaxIteration_num=5;
-MaxIteration_num=1;
+MaxIteration_num=2;
 beta = 0.002;
 D=(P*X'+Q*Y')*pinv(X*X'+Y*Y');
-%  D=(P*X'+Q*Y')*pinv(X*X'+Y*Y');%ÀàËÆ³õÊ¼»¯ 250*300
-%% gaobin added Õı½»×ÖµäÔ¼ÊøÏÂ£¬²ÉÓÃyangmeng2013joint JDDLDR
+%  D=(P*X'+Q*Y')*pinv(X*X'+Y*Y');%ç±»ä¼¼åˆå§‹åŒ– 250*300
+%% gaobin added æ­£äº¤å­—å…¸çº¦æŸä¸‹ï¼Œé‡‡ç”¨yangmeng2013joint JDDLDR
 numcomps = size(D,1);
 iter_num_sub= 1;
 while iter_num_sub<MaxIteration_num % subject iteration for updating p, iteration ends when the contiguous function get close enough or reach teh max_iteration
